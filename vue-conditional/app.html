@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Vue 101</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>Conditionals</h1>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <!-- <p v-if="error">There has been an error</p>
+        <p v-else-if="success">Whooo, success :)</p> -->
+
+        <p v-show="error">There has been an error</p>
+        <p v-show="success">Whooo, success :)</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
