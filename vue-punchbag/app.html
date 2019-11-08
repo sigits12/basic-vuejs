@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Vue 101</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- bag image -->
+        <div id="bag" v-bind:class="{ burst: ended }">
+
+        </div>
+
+        <!-- bag health -->
+        <div id="bag-health">
+            <div v-bind:style="{ width: health + '%' }"></div>
+        </div>
+
+        <!-- game controls -->
+        <div id="controls">
+            <button v-bind:disabled="disablePunch" v-on:click="punch">Punch</button>
+            <button v-on:click="restart">Restart</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
